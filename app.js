@@ -14,6 +14,9 @@ function string_square(s){
 app.get('/square?string=my_string', (req, res) => {
     const s = req.query.my_string
     string_square(s);
+    res.status(200).json({
+        message: {result: result}
+    })
 })
 
 app.listen(PORT, () => console.log('Example app listening on port'+ PORT))
