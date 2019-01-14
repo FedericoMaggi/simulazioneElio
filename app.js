@@ -15,7 +15,7 @@ app.get('/square', (req, res) => {
     const s = req.query.string
     res = string_square(s);
     res.status(200).json({
-        result: 
+        result: res
     })
 })
 
