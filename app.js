@@ -11,11 +11,11 @@ function string_square(s){
     return res;
 }
 
-app.get('/square?string=my_string', (req, res) => {
-    const s = req.query.my_string
-    string_square(s);
+app.get('/square', (req, res) => {
+    const s = req.query.string
+    res = string_square(s);
     res.status(200).json({
-        message: {result: result}
+        result: 
     })
 })
 
